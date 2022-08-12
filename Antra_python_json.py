@@ -1,19 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[55]:
-
-
 import json
 import math
 
-
-# In[56]:
-
-
 # split 9995 movies into 8 json files
-# fist 7 files each contains 1250 movies
-# last file contains 1245 files
+# first 7 files each contain 1250 movies
+# last file contains 1245 movies
 with open('movie.json', 'r', encoding='utf8') as f:
     data = json.load(f)
     total_size = len(data['movie']) # total size: 9995
@@ -26,6 +16,4 @@ with open('movie.json', 'r', encoding='utf8') as f:
         json_object = json.dumps(data2, indent = 4) 
         
         with open("movie_" + str(i + 1) + ".json", "w") as outfile:
-            json.dump(data2, outfile)
-    
-
+            json.dump(data2, outfile) 
