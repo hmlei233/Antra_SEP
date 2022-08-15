@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-
 import os, uuid
 import sys
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient, __version__
@@ -23,9 +17,4 @@ with open('optional.csv', 'w') as f:
         f.write('/'+blob.name) #this will write on the csv file just the blob name
         f.write('\n')   
 
-
-# In[ ]:
-
-
-
-
+# error: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature.
